@@ -5,25 +5,26 @@
  */
 package ooddjava.User;
 
+import ooddjava.People.People;
+
 /**
  *
  * @author Scott Hardy
  */
-public abstract class User {
-    long id; 
-    static long nextid = 0;
+public abstract class User extends People{
+    
     String username;
     String password;
-    String type;
     
-    public void User(String u, String p, String t) {
-        id = nextid;
-        nextid += 1;
+    
+    public void User(String f, String l, String t, String u, String p){
+        fname = f;
+        lname = l;
+        id = setid();
+        type = t;
         username = u;
         password = p;
-        type = t;
-    } 
-    
+    }
     public boolean changePassword (String p){
         
         if (p.length() >= 9){

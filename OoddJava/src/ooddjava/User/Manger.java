@@ -11,13 +11,19 @@ package ooddjava.User;
  */
 public class Manger extends BSU {
     
-    public void createBSU(String u, String p){
-        id = nextid;
-        nextid += 1;
+   public void Manger (String f, String l, String u, String p){
+        fname = f;
+        lname = l;
+        id = setid();
+        type = "Manger";
         username = u;
         password = p;
-        type = "bsu";
-        mngid = this.id; 
+        
     }
+    
+   public void createbsu(){
+       new BSU(String f, String l, String u, String p, this);
+       
+   }
     
 }

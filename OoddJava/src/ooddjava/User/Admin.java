@@ -11,4 +11,14 @@ package ooddjava.User;
  */
 public class Admin extends Manger {
     
+    public void Admin (String f, String l, String u, String p){
+        fname = f;
+        lname = l;
+        id = setid();
+        type = "Admin";
+        username = u;
+        password = p;
+        
+    }
+    
 }

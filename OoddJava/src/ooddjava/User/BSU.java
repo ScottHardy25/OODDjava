@@ -11,6 +11,27 @@ package ooddjava.User;
  */
 public class BSU extends User{
 
-   long mngid;
+   Manger manger;
+   
+    public void BSU (String f, String l, String u, String p, Manger m){
+        fname = f;
+        lname = l;
+        id = setid();
+        type = "BSU";
+        username = u;
+        password = p;
+        manger = m;
+    }
+    
+    // no manger 
+    public void BSU (String f, String l, String u, String p){
+        fname = f;
+        lname = l;
+        id = setid();
+        type = "BSU";
+        username = u;
+        password = p;
+        
+    }
     
 }
