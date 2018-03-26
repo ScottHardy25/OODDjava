@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="ooddjava.Screens.MainScreenController">
+   <children>
+      <Button layoutX="401.0" layoutY="175.0" mnemonicParsing="false" text="Submit" />
+      <Button layoutX="513.0" layoutY="338.0" mnemonicParsing="false" text="Log Out" textAlignment="CENTER" />
+      <ComboBox layoutX="145.0" layoutY="175.0" prefHeight="25.0" prefWidth="230.0" />
+      <Text id="time" layoutX="247.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24:00" />
+      <Text id="date" layoutX="300.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30th June 2018" />
+      <Text id="name" layoutX="60.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="John Smith" />
+      <Text id="usertype" layoutX="522.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+   </children>
+</AnchorPane>
