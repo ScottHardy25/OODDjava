@@ -3,12 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ooddjava.Methord;
+package ooddjava.Method;
 
 /**
  *
  * @author User
  */
 public class Confirm {
-    
+
+    public static boolean checkconfirm() {
+
+        //would you like to confirm 
+        if (true) {
+            return true;
+        }
+        return false;
+
+    }
+
 }

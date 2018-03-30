@@ -9,6 +9,6 @@ package ooddjava.People;
  *
  * @author Scott Hardy
  */
-public class Tentants {
+public class Tenants {
     
 }

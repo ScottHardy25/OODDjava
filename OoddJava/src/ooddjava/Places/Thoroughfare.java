@@ -14,11 +14,14 @@ public class Thoroughfare extends Places {
     
     Estate estate;
     
-    public void Thoroughfare (  String nm, Estate e){
+    public Thoroughfare (  String nm, Estate e){
         
         estate = e;
         id = setid();
         name = nm;
         
     }
+    
+   
+    
 }

@@ -12,12 +12,14 @@ package ooddjava.Places;
  * be it a household, street or region. They all share 1 id database via static
  * nextid and id
  */
+import ooddjava.Method.Confirm;
+
 
 public abstract class Places {
     
     
-    long id;
-    static long nextid = 1;
+    int id;
+    static int nextid = 1;
     String name;
     
     public void Places( long e, String nm){
@@ -27,12 +29,31 @@ public abstract class Places {
         
     }
     
-    public void rename( String nm){name = nm;}
+    public boolean rename (int idin, String nm) {
+        
+        if (id == idin){
+            name = nm;
+            return true;
+        }
+        return false;
+        
+    }
     
     //to keep id's from clashing it will all be done via places
-    public long setid(){
-        long idout = nextid;
+    public int setid(){
+        int idout = nextid;
         nextid += 1;
         return idout;
     }
+    
+    public boolean delete(){
+        
+        if(Confirm.checkconfirm()){
+            this.delete();
+            return true;
+        }
+        return false;
+    }
+    
+    
 }

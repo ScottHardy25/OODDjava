@@ -5,6 +5,8 @@
  */
 package ooddjava.User;
 
+import static ooddjava.Method.Password.genpassword;
+import ooddjava.Method.Validator;
 import ooddjava.People.People;
 
 /**
@@ -17,24 +19,22 @@ public abstract class User extends People{
     String password;
     
     
-    public void User(String f, String l, String t, String u, String p){
-        fname = f;
-        lname = l;
-        id = setid();
-        type = t;
+    public User(String f, String l, String t, String u ){
+        super(f,l,t);
         username = u;
-        password = p;
+        password = genpassword();
     }
-    public boolean changePassword (String p){
-        
-        if (p.length() >= 9){
-        password = p;
-        return true;
-        }
-        return false;
-        
-    }
-           
     
+    
+    public boolean changePassword (String p){
+         if (Validator.checkpassword(p)){
+            password = p;
+            return true;
+        }
+        return false;     
+    }
+     
+    public String getusername() { return username;}
+    public String getpassword() { return password;}
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ooddjava.Methord;
+package ooddjava.Method;
 
 /**
  *
@@ -13,7 +13,7 @@ import java.io.*;
 public class Validator {
     
     //these are the current uk bands
-    public boolean checkband(String cb){
+    public static boolean checkband(String cb){
         cb = cb.toLowerCase();
         
         if (  "b".equals(cb)|| "c".equals(cb)|| "d".equals(cb)|| 
@@ -27,7 +27,7 @@ public class Validator {
     
     
     //will be used to keep all the same spellings of the diffrent property types
-    public boolean checkproptype(String pt){
+    public static boolean checkproptype(String pt){
         pt = pt.toLowerCase();
         if ("flat".equals(pt)||"detached".equals(pt)||"semiDetached".equals(pt)||
                 "terraced".equals(pt)||"endofterraced".equals(pt)||
@@ -37,7 +37,16 @@ public class Validator {
         }
         return false;
     }
-}
+    
+    public static boolean checkpassword(String p){
+        
+        if ( (p.length() >= 9) && (p.length() <= 30) ){
+            return true;
+        }
+        return false;
+    }
+    
+   
 
 
-     
+}    

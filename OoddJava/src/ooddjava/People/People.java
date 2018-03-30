@@ -12,25 +12,19 @@ import java.text.SimpleDateFormat;
  * Like in Places, People all share 1 id. People are the 
  */
 public abstract class People {
-    public static long nextid = 0;
-    public long id;
+    public static int nextid = 1;
+    public int id;
     public String fname;
     public String lname;
     public String type;
     
     
-    public void people (String f, String l, String t){
+    public People (String f, String l, String t){
         fname = f;
         lname = l;
         id = setid();
         type = t;
         
-    }
-    
-     public long setid(){
-        long idout = nextid;
-        nextid += 1;
-        return idout;
     }
     
     // updateing data
@@ -45,8 +39,13 @@ public abstract class People {
     public String gettype (){ return type;}
     public long getid(){ return id;}
     
-    //methords
+    //methods
     
+    public int setid(){
+        int idout = nextid;
+        nextid += 1;
+        return idout;
+    } 
   
     
     

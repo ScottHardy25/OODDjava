@@ -11,18 +11,14 @@ package ooddjava.User;
  */
 public class Manger extends BSU {
     
-   public void Manger (String f, String l, String u, String p){
-        fname = f;
-        lname = l;
-        id = setid();
-        type = "Manger";
-        username = u;
-        password = p;
-        
+   public  Manger (String f, String l, String t, String u){
+         super(f, l, u, t);
+         type = "Manger";
     }
     
-   public void createbsu(){
-       //new BSU(String f, String l, String u, String p, this);
+   public void createbsu(String f, String l, String u){
+       int i = id;
+       //new BSU Bsu1 = BSU(f, l, u,  p, i);
        
    }
     
