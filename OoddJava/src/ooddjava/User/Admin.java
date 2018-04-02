@@ -18,4 +18,16 @@ public class Admin extends Manger {
         
     }
     
+     @Override
+   public String toString() {
+        return new StringBuffer(" First Name: ").append(this.fname)
+        .append(" Last Name: ").append(this.lname)
+        .append(" Type: ").append(this.type)
+        .append(" ID: ").append(this.id)
+        .append(" Username: ").append(this.username)
+        .append(" Password: ").append(this.password).toString();
+        
+
+    } 
+    
 }

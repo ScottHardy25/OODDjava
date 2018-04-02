@@ -19,7 +19,7 @@ public class BSU extends User{
         
      
         super(f, l, u, t);
-        type = "BSU";
+        this.type = "BSU";
         mangerid = m;
     }
     
@@ -28,6 +28,20 @@ public class BSU extends User{
          super(f, l, u, t );
          type = "BSU";
     }
-  
+   
+    
+    @Override
+    
+   public String toString() {
+        return new StringBuffer(" First Name: ").append(this.fname)
+        .append(" Last Name: ").append(this.lname)
+        .append(" Type: ").append(this.type)
+        .append(" ID: ").append(this.id)
+        .append(" Username: ").append(this.username)
+        .append(" Password: ").append(this.password)
+        .append(" Mangers ID: ").append(this.mangerid).toString();
+        
+
+    } 
 }
 

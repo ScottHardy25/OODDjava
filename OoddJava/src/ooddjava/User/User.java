@@ -21,20 +21,31 @@ public abstract class User extends People{
     
     public User(String f, String l, String t, String u ){
         super(f,l,t);
-        username = u;
-        password = genpassword();
+        this.username = u;
+        this.password = genpassword();
     }
     
     
     public boolean changePassword (String p){
          if (Validator.checkpassword(p)){
-            password = p;
+            this.password = p;
             return true;
         }
         return false;     
     }
      
-    public String getusername() { return username;}
-    public String getpassword() { return password;}
+    public String getusername() { return this.username;}
+    public String getpassword() { return this.password;}
+    
+    public String toString() {
+        return new StringBuffer(" First Name: ").append(this.fname)
+        .append(" Last Name: ").append(this.lname)
+        .append(" Type: ").append(this.type)
+        .append(" ID: ").append(this.id)
+        .append(" Username: ").append(this.username)
+        .append(" Password: ").append(this.password).toString();
+        
+
+    }
     
 }

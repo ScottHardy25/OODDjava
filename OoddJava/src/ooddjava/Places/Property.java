@@ -18,10 +18,11 @@ public class Property extends Places {
     Owner owner;
     Thoroughfare thoroughfare;
     
-    public void Property(String t, Owner o, Thoroughfare f){
-        type = t;
-        owner = o;
-        thoroughfare = f;
+    public Property(String nm, String t, Owner o, Thoroughfare f){
+        super(nm);
+        this.type = t;
+        this.owner = o;
+        this.thoroughfare = f;
         
     }
     

@@ -5,6 +5,8 @@
  */
 package ooddjava.User;
 
+import static ooddjava.Method.Password.genpassword;
+
 /**
  *
  * @author Scott Hardy
@@ -16,10 +18,22 @@ public class Manger extends BSU {
          type = "Manger";
     }
     
+   
    public void createbsu(String f, String l, String u){
        int i = id;
-       //new BSU Bsu1 = BSU(f, l, u,  p, i);
-       
+       BSU b = new BSU(f, l, u, genpassword(), i);
    }
+   
+   @Override
+   public String toString() {
+        return new StringBuffer(" First Name: ").append(this.fname)
+        .append(" Last Name: ").append(this.lname)
+        .append(" Type: ").append(this.type)
+        .append(" ID: ").append(this.id)
+        .append(" Username: ").append(this.username)
+        .append(" Password: ").append(this.password).toString();
+        
+
+    } 
     
 }

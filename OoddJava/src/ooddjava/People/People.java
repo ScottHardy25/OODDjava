@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ooddjava.People;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 
 /**
@@ -11,7 +12,7 @@ import java.text.SimpleDateFormat;
  * @author Scott Hardy
  * Like in Places, People all share 1 id. People are the 
  */
-public abstract class People {
+public abstract class People implements Serializable {
     public static int nextid = 1;
     public int id;
     public String fname;
@@ -20,24 +21,24 @@ public abstract class People {
     
     
     public People (String f, String l, String t){
-        fname = f;
-        lname = l;
-        id = setid();
-        type = t;
+        this.fname = f;
+        this.lname = l;
+        this.id = setid();
+        this.type = t;
         
     }
     
     // updateing data
-    public void Changefname (String f){ fname = f;}
-    public void Changelname (String l){ lname = l;}
-    public void Changetype  (String t){ type = t; }
+    public void Changefname (String f){ this.fname = f;}
+    public void Changelname (String l){ this.lname = l;}
+    public void Changetype  (String t){ this.type = t; }
     
     //getting data
-    public String getname (){ return fname + lname;}
-    public String getlname (){ return lname;}
-    public String getfname (){ return fname;}
-    public String gettype (){ return type;}
-    public long getid(){ return id;}
+    public String getname (){ return this.fname + " " + this.lname;}
+    public String getlname (){ return this.lname;}
+    public String getfname (){ return this.fname;}
+    public String gettype (){ return this.type;}
+    public long getid(){ return this.id;}
     
     //methods
     
@@ -47,7 +48,16 @@ public abstract class People {
         return idout;
     } 
   
-    
+    @Override
+
+    public String toString() {
+        return new StringBuffer(" First Name: ").append(this.fname)
+        .append(" Last Name: ").append(this.lname)
+        .append(" Type: ").append(this.type)
+        .append(" ID: ").append(this.id).toString();
+
+    }
+  
     
     
     

@@ -9,6 +9,7 @@ package ooddjava.People;
  *
  * @author Scott Hardy
  */
-public class Owner {
+public class Owner extends People  {
     
+    public Owner (String f, String l, String t){ super(f,l,"Owner");}
 }

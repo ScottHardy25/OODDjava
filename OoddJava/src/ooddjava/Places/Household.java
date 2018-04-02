@@ -20,9 +20,10 @@ public class Household extends Places {
     String band;
     Property property;
     
-    public Household( String typ, Owner o, Tenants ten, 
+    public Household( String nm, String typ, Owner o, Tenants ten, 
                            int bd, int bt, String b, Property p){
         
+        super(nm);
         type = typ;
         owner = o;
         tenant = ten;
@@ -30,46 +31,55 @@ public class Household extends Places {
         bath = bt;
         band = b;
         property = p;
-        id = setid();
         
    
     }
     // no tenants in household 
-    public Household( String typ, Owner o, 
+    public Household( String nm, String typ, Owner o, 
                            int bd, int bt, String b, Property p){
-        
-        type = typ;
-        owner = o;
-        bed = bd;
-        bath = bt;
-        band = b;
-        property = p;
-        id = setid();
-   
+        super(nm);
+        this.type = typ;
+        this.owner = o;
+        this.bed = bd;
+        this.bath = bt;
+        this.band = b;
+        this.property = p;
     }
     
     public void removeTenant(){
-        if (tenant != null){
-            tenant = null;
-        }
-        
+            this.tenant = null;
     }
     
     public void editOwner(Owner o){
-        owner = o;
+        this.owner = o;
     }
     public void editTenant(Tenants ten){
-        tenant = ten ;}
+        this.tenant = ten ;}
     public void editBed(int b){
-        bed = b; }
+        this.bed = b; }
     public void editBath(int b){
-        bath = b; }
+        this.bath = b; }
     public void editBand(String b){
-        band = b; }
+        this.band = b; }
     public void editProperty(Property p){
-        property = p; }
+        this.property = p; }
     
-    
+    @Override
+   public String toString() {
+        return new StringBuffer("Name: ").append(this.name)
+        .append(" ID: ").append(this.id)
+        .append(" Type: ").append(this.type)        
+        .append(" Owner: ").append(this.owner)
+        .append(" Tenants: ").append(this.tenant)
+        .append(" Beds: ").append(this.bed)
+        .append(" Baths: ").append(this.bath)
+        .append(" Band: ").append(this.band) 
+        .append(" Property: ").append(this.property).toString();
+
+        
+    } 
+   
+   
     
 }
 

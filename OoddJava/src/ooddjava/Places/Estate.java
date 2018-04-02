@@ -17,26 +17,35 @@ import ooddjava.User.Manger;
 public class Estate extends Places {
     
     Region region;
-    Manger manger; 
+    int mangerid; 
     
     
-    public void Estate(String nm, long e, Region r, Manger mn ){
+    public  Estate(String nm,Region r, int mn ){
   
-        id = setid();
-        name = nm;
-        manger = mn;
-        region = r;
+        super(nm);
+        this.mangerid = mn;
+        this.region = r;
                 
     }
     
     // if there is no current manger to assign to the Estate
-    public void Estate(String nm, long e, Region r){
+    public  Estate(String nm,Region r ){
   
-        id = setid();
-        name = nm;
-        region = r;
+        super(nm);
+
+        this.region = r;
                 
     }
+    
+      @Override
+   public String toString() {
+        return new StringBuffer("Name: ").append(this.name)
+        .append(" ID: ").append(this.id)
+        .append(" Region: ").append(this.region)
+        .append(" Manger ID: ").append(this.mangerid).toString();
+        
+
+    } 
     
     
 }

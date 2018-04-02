@@ -16,9 +16,9 @@ public class Thoroughfare extends Places {
     
     public Thoroughfare (  String nm, Estate e){
         
-        estate = e;
-        id = setid();
-        name = nm;
+        super(nm);
+        this.estate = e;
+        
         
     }
     

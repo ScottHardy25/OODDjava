@@ -12,20 +12,21 @@ package ooddjava.Places;
  * be it a household, street or region. They all share 1 id database via static
  * nextid and id
  */
+import java.io.Serializable;
 import ooddjava.Method.Confirm;
 
 
-public abstract class Places {
+public abstract class Places implements Serializable{
     
     
     int id;
     static int nextid = 1;
     String name;
     
-    public void Places( long e, String nm){
+    public Places(String nm){
   
-        id = setid();
-        name = nm;
+        this.id = setid();
+        this.name = nm;
         
     }
     
@@ -55,5 +56,12 @@ public abstract class Places {
         return false;
     }
     
+    @Override
+   public String toString() {
+        return new StringBuffer("Name: ").append(this.name)
+        .append(" ID: ").append(this.id).toString();
+        
+
+    } 
     
 }

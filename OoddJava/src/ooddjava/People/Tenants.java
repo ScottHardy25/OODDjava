@@ -9,6 +9,9 @@ package ooddjava.People;
  *
  * @author Scott Hardy
  */
-public class Tenants {
+public class Tenants extends People  {
+    
+    public Tenants (String f, String l, String t){ super(f,l,"Tenant");}
+
     
 }

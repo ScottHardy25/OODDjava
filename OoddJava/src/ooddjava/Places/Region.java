@@ -15,22 +15,29 @@ import ooddjava.User.Manger;
  */
 public class Region extends Places {
    
-    Manger manger;
+    int mangerid;
     
-    public void Region( long e, String nm){
+    public Region(String nm){
   
-        id = setid();
-        name = nm;
+        super(nm);
         
     }
     
-    public void Region( long e, String nm, Manger m){
-  
-        id = setid();
-        name = nm;
-        manger = m;
+    public Region(String nm, int m){
+ 
+        super(nm);
+        this.mangerid = m;
         
     }
+    
+    @Override
+   public String toString() {
+        return new StringBuffer("Name: ").append(this.name)
+        .append(" ID: ").append(this.id)
+        .append(" Manger ID: ").append(this.mangerid).toString();
+        
+
+    } 
    
    
 }
