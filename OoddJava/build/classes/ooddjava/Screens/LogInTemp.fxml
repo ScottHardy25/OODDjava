@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="ooddjava.Screens.LogInTempController">
+   <children>
+      <Button layoutX="76.0" layoutY="68.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="249.0" layoutY="68.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="407.0" layoutY="68.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="249.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="407.0" layoutY="142.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="249.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="407.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+      <Button layoutX="407.0" layoutY="315.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="103.0" text="Button" />
+   </children>
+</AnchorPane>

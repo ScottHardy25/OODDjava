@@ -38,7 +38,8 @@ public abstract class People implements Serializable {
     public String getlname (){ return this.lname;}
     public String getfname (){ return this.fname;}
     public String gettype (){ return this.type;}
-    public long getid(){ return this.id;}
+    public int getid(){ return this.id;}
+    public int getnextid(){ return nextid;}
     
     //methods
     

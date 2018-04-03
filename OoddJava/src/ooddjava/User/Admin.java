@@ -5,6 +5,9 @@
  */
 package ooddjava.User;
 
+import static ooddjava.Method.Password.genpassword;
+import static ooddjava.Method.Validator.lowercase;
+
 /**
  *
  * @author Scott Hardy
@@ -17,6 +20,24 @@ public class Admin extends Manger {
        
         
     }
+    
+    public  Admin (String f, String l, String u, String p){
+       super(f,l,"Admin",u);
+       type = "Admin";
+       password = lowercase(p); 
+       
+        
+    }
+     
+      public void createbsu(String first, String last, String user, int manid){
+       int next = getnextid();
+       BSU bsu = new BSU(first, last, user, genpassword(), manid);
+   }
+      public void createmanger(String first, String last, String user){
+        int next = getnextid();
+       Manger manger = new Manger(first, last, null, user);
+      }
+              
     
      @Override
    public String toString() {

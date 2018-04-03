@@ -19,6 +19,7 @@ public abstract class User extends People{
     String password;
     
     
+    
     public User(String f, String l, String t, String u ){
         super(f,l,t);
         this.username = u;

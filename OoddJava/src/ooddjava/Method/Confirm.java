@@ -20,5 +20,14 @@ public class Confirm {
         return false;
 
     }
+    
+    public static boolean checktext(){
+        
+        //if (this.getText()!=null && !this.getText().isEmpty()){
+            return true; 
+       // }
+       // return false;
+    }
+    
 
 }

@@ -19,9 +19,10 @@ public class Manger extends BSU {
     }
     
    
-   public void createbsu(String f, String l, String u){
-       int i = id;
-       BSU b = new BSU(f, l, u, genpassword(), i);
+   public void createbsu(String first, String last, String user){
+       int i = this.id;
+       int next = getnextid();
+       BSU bsu = new BSU(first, last, user, genpassword(), i);
    }
    
    @Override
