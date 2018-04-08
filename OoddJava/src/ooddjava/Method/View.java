@@ -38,5 +38,13 @@ public class View {
     
     public Owner viewOwner(){}
     public Tenants ViewTentants(){}
- */   
-}
+  
+    
+    public User viewUser(){
+        
+       
+      for (int i = 0; i < ooddjava.OoddJava.users.size(); i++)
+    System.out.println(users.get(i));
+    */
+    }
+

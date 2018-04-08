@@ -12,7 +12,7 @@ package ooddjava.Method;
 import java.util.Random;
 
 public class Password {
-    
+    //39060 diffrent passwords from this generator 
     static final String[] PASSARRAY = {  
         "outjump","blowzed","hutzpah","kajeput","quickie","jugging","quipped",
         "quaffed","quakily","killjoy","jubhahs","hypoxic","chintzy","kickoff",
