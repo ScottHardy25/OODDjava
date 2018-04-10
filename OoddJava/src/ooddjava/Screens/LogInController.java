@@ -45,10 +45,11 @@ public class LogInController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         MainScreenController mainscreen1 = new MainScreenController();
         
-        AnchorPane mainScreenAnchorpane =  mainscreen1.getMainScreenpane();
+        AnchorPane mainScreenAnchorpane =  new AnchorPane();
+        mainscreen1.setMainScreenpane(mainScreenAnchorpane);
         
         StackPane mainstackpane = new StackPane();
-        
+       
         mainstackpane.getChildren().add(mainScreenAnchorpane);
       
            
@@ -62,32 +63,8 @@ public class LogInController implements Initializable {
         
     }
     
-    /*
-  SecondGUIController secondguicntrl = new SecondGUIController();
-      
-       //intantiate the second GUI anchorpane 
-        AnchorPane secondGUIAnchorpane = secondguicntrl.getSecondGUIAnchorPane();
 
-        //instantiate a stack pane
-        StackPane secondGUIstackpane = new StackPane();
-        
-        //add the secondGUI anchor pane to the stack pane
-        secondGUIstackpane.getChildren().add(secondGUIAnchorpane);
-        
-        // add the stack pane to the secondGUI scene
-        Scene secondGUIscene = new Scene(secondGUIstackpane);
-        
-        //create a new stage for the second GUI
-        Stage SecondGUIstage = new Stage();
-        
-        //add the second GUI scene to the create stage
-        SecondGUIstage.setScene(secondGUIscene);
-        
-        //show the secondGUI stage
-        SecondGUIstage.show();
-    
-    */
-    
+  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
